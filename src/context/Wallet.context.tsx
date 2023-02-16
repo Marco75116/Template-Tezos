@@ -25,6 +25,15 @@ const WalletProvider = ({ children }: WalletProviderProps) => {
   const initWallet = async () => {
     const wallet = await setProvider();
     const address = await wallet.getPKH();
+    // eslint-disable-next-line no-console
+    console.log(
+      "In Init Wallet",
+      wallet,
+      "address : ",
+      address,
+      "connected ?",
+      isWalletConnected
+    );
 
     setIsWalletConnected(true);
     setCurrentWalletAddress(address);
