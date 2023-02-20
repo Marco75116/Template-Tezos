@@ -7,15 +7,15 @@ const TemplatePage = () => {
 
   return (
     <>
-      <div className="bg-yellow-100 flex flex-col w-screen h-screen">
-        <div className="bg-blue-100 p-4 flex justify-end">
+      <div className="flex h-screen w-screen flex-col bg-yellow-100">
+        <div className="flex justify-end bg-blue-100 p-4">
           <ConnectButton />
         </div>
         <div className="flex flex-col items-center">
-          <h1 className="p-10 text-3xl text-center">Tailwind Template </h1>
+          <h1 className="p-10 text-center text-3xl">Tailwind Template </h1>
           <div
             onClick={() => setIsOpen(true)}
-            className="bg-pink-200 w-50 p-4 rounded-md cursor-pointer animate-bounce shadow-lg hover:bg-pink-300"
+            className="w-50 animate-bounce cursor-pointer rounded-md bg-pink-200 p-4 shadow-lg hover:bg-pink-300"
           >
             Open modal
           </div>
@@ -23,7 +23,7 @@ const TemplatePage = () => {
       </div>
 
       <Modal showModal={isOpen} closeFunction={() => setIsOpen(false)}>
-        <div className="text-black pt-6">Hello I am a modal</div>
+        <div className="pt-6 text-black">Hello I am a modal</div>
       </Modal>
     </>
   );
